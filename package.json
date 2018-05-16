@@ -1,0 +1,31 @@
+{
+  "name": "jinro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "c": "node node/compile.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candyrobot/Jinro.git"
+  },
+  "author": "hideaki tanaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/candyrobot/Jinro/issues"
+  },
+  "homepage": "https://github.com/candyrobot/Jinro#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "@babel/preset-react": "^7.0.0-beta.47",
+    "babel-preset-env": "^1.7.0",
+    "react": "^16.3.2"
+  }
+}
