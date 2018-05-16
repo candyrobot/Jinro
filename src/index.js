@@ -1,14 +1,17 @@
-import Judge from '../lib/factory/Judge.js';
+import Judger from '../lib/factory/Judger.js';
 import Jinro from '../lib/factory/Job/Jinro.js';
 import Shimin from '../lib/factory/Job/Shimin.js';
-import Model from '../lib/service/Model.js';
 
 (function main(){
-  Model.players.push( new Jinro() );
-  Model.players.push( new Jinro() );
-  Model.players.push( new Shimin() );
-  Model.players.push( new Shimin() );
-  Model.players.push( new Shimin() );
-  Model.players.push( new Shimin() );
-  new Judge();
+  var judger = new Judger({
+    players: [
+      new Jinro(),
+      new Jinro(),
+      new Shimin(),
+      new Shimin(),
+      new Shimin(),
+      new Shimin(),
+    ]
+  });
+  judger.judge();
 })()
