@@ -24,13 +24,13 @@ import Shimin from '../lib/factory/Job/Shimin';
     ]
   });
 
-  var isWin;
-  while( isWin = judger.judge() ) {
-    var str = await new Promise(res => rl.once("line",res))
-    console.log("getA:"+str);
-    console.log(isWin);
+  var gameResult;
+  while( !(gameResult = judger.judge()) ) {
+    var i = await new Promise(res => rl.once("line",res));
+    judger.players.splice(i, 1);
+    console.dir("players:"+judger.players);
   }
-  // judger.judge();
+  console.log(gameResult);
 
   process.exit();
 })();
