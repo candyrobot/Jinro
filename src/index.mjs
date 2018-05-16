@@ -11,6 +11,7 @@ import Judger from '../lib/factory/Judger';
 import Jinro from '../lib/factory/Job/Jinro';
 import Shimin from '../lib/factory/Job/Shimin';
 import Yoko from '../lib/factory/Job/Yoko';
+import Akadsukin from '../lib/factory/Job/Akadsukin';
 
 (async function main(){
 
@@ -20,7 +21,7 @@ import Yoko from '../lib/factory/Job/Yoko';
       new Jinro(),
       new Jinro(),
       new Shimin(),
-      new Shimin(),
+      new Akadsukin(),
       new Shimin(),
     ]
   });
