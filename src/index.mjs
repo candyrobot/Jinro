@@ -12,8 +12,6 @@ import Jinro from '../lib/factory/Job/Jinro';
 import Shimin from '../lib/factory/Job/Shimin';
 
 (async function main(){
-  var str=await new Promise(res=>rl.once("line",res));
-  console.log("getA:"+str);
 
   var judger = new Judger({
     players: [
@@ -25,7 +23,14 @@ import Shimin from '../lib/factory/Job/Shimin';
       new Shimin(),
     ]
   });
-  judger.judge();
+
+  var isWin;
+  while( isWin = judger.judge() ) {
+    var str = await new Promise(res => rl.once("line",res))
+    console.log("getA:"+str);
+    console.log(isWin);
+  }
+  // judger.judge();
 
   process.exit();
 })();
