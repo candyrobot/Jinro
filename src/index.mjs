@@ -10,14 +10,15 @@ const rl = readline.createInterface(process.stdin,process.stdout);
 import Judger from '../lib/factory/Judger';
 import Jinro from '../lib/factory/Job/Jinro';
 import Shimin from '../lib/factory/Job/Shimin';
+import Yoko from '../lib/factory/Job/Yoko';
 
 (async function main(){
 
   var judger = new Judger({
     players: [
+      new Yoko(),
       new Jinro(),
       new Jinro(),
-      new Shimin(),
       new Shimin(),
       new Shimin(),
       new Shimin(),
