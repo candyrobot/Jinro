@@ -28,9 +28,17 @@ import Akadsukin from '../lib/factory/Job/Akadsukin';
 
   var gameResult;
   while( !(gameResult = judger.judge()) ) {
+    console.log('shokei🌟Index:');
     var i = await new Promise(res => rl.once("line",res));
     judger.players.splice(i, 1);
-    console.dir("players:"+judger.players);
+    console.log("players:"+judger.players);
+
+    if( gameResult = judger.judge() ) break;
+
+    console.log('shugeki🌟Index:');
+    var i = await new Promise(res => rl.once("line",res));
+    judger.players.filter( (player) => player.camp != 'jinro' ).splice(i, 1);
+    console.log("players:"+judger.players);
   }
   console.log(gameResult);
 
